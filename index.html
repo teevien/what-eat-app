@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700|Playfair+Display:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>What to eat?</title>
+</head>
+<body>
+    <!-- Header Start -->
+    <header id="random">
+      
+    </header>
+    <!-- Header End -->
+    <!-- Main Start -->
+    <main>
+        <section class="main">
+            <div class="wrapper clearfix">
+                <h1>Restaurant<span>Finder</span></h1>
+                <!-- Choose City -->
+                <div class="choose-city">
+                    <h2 class="circle">1</h2>
+                    <h2>Choose a City</h2>
+            
+                    <form>
+                        <label for="userInput"></label>
+                        <input type="text" placeholder="Enter a city" id="userInput" class="input" name="userInput"
+                            required>
+                        <button type="submit" class="search" title="search cuisines in the specified city">
+                            <!-- <i class="fas fa-search"></i> -->
+                            Submit
+                        </button>
+                    </form>
+                </div>
+                <!-- Choose City Ends -->
+                <!-- Choose Cuisine -->
+                <div class="choose-cuisine">
+                    <!-- <p>Searching in..</p>
+                    <h2 id="displayCity"></h2> -->
+                    <h2 class="circle">2</h2>
+                    <h2>Choose a Cuisine</h2>
+                    <form class="chooseCuisine">
+                        <label for="cuisines"></label>
+                        <select name="cuisines" id="cuisineList" required>
+                            <option value="" selected disabled>Choose Cuisine</option>
+                        </select>
+                        <label for="submitCuisine"></label>
+                        <button id="submitCuisine" class="submit" title="shows restaurants">Find a restaurant</button>
+                    </form>
+                </div>
+                <!-- Choose Cuisine Ends -->
+            </div>
+        </section>
+
+        <!-- Display Results Start -->
+        <section class="results">
+            <div class="wrapper">
+                <div class="result">
+                    <div id="restaurantName">
+                        <!-- populate with ajax call -->
+                    </div>
+
+                    <form>
+                        <label for="searchAgain"></label>
+                        <button 
+                            id="searchAgain"
+                            class="submit"
+                        >Another One</button>
+
+                        <label for="newSearch"></label>
+                        <button
+                            id="newSearch"
+                            type="submit"
+                            class="submit"
+                        >New Search</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!-- Display Results End -->
+    </main>
+    <!-- Main End -->
+    <!-- JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+html {
+    font-size:62.5%;
+
+    body {
+        font-size: 1.4rem;
+        font-family: $baseFont;
+    
+        .circle {
+            background: #F97C7C;
+            width:15%;
+            border-radius:50%;
+            padding:10px 15px 15px 15px;
+            margin:0 auto;
+            font-size:4rem;
+        }
+        .wrapper {
+            margin:0 auto;
+            max-width:1280px;
+            width: 70%;
+
+            button {
+                background: #F97C7C;
+                padding:5px 10px;
+                width:60%;
+                border:none;
+                font-weight:bold;
+                text-transform:uppercase;
+                font-size:1.2rem;
+                margin-top:5px;
+            }
+        }
+    }
+}
+
