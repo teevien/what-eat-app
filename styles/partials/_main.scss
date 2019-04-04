@@ -30,15 +30,25 @@ h1 {
 }
 
 .choose-city {
+    @media (max-width:575px) {
+        width: 100%;
+    }
     input {
         width:60%;
         border:none;
+        @media (max-width:575px) {
+            width:80%;
+        }
     }
 }
 
 .choose-cuisine {
     margin-left:15px;
     width:calc(50% - 15px);
+    @media (max-width:575px) {
+        width:100%;
+        margin-left:0;
+    }
 
     form {
         position:relative;
@@ -47,6 +57,9 @@ h1 {
         width:60%;
         // border:none;
         border: 1px solid white;
+        @media (max-width:575px) {
+            width:80%;
+        }
         
         &:focus {
             border:1px solid #F97C7C;
@@ -67,16 +80,36 @@ h1 {
                 padding:3%;
                 width:50%;
                 margin:50px auto 0 auto;
+                @media(max-width:575px) {
+                    width:80%;
+                    padding:1%;
+                }
+                @media (max-width:400px) {
+                    width:95%;
+                }
             }
 
             .img-container {
                 width:50%;
                 margin:0 auto;
+                @media (max-width:575px) {
+                    width:80%;
+                }
+
+                @media (max-width:400px) {
+                    width:95%;
+                }
                 img {
                     width:100%;
                     display:block;
                 };
             };
+
+            // button {
+            //     @media (max-width:575px) {
+            //         width:100%;
+            //     }
+            // }
         };
     };
 };

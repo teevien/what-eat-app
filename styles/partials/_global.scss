@@ -12,11 +12,39 @@ html {
             padding:10px 15px 15px 15px;
             margin:0 auto;
             font-size:4rem;
+            @media (max-width:940px) {
+                // padding:15px 20px;
+                width:20%;
+            }
+
+            @media (max-width:775px) {
+                width:27%;
+            }
+
+            @media (max-width:575px) {
+                width:15%;
+            }
+
+            @media (max-width:450px) {
+                width:20%;
+            }
+
+            @media (max-width:375px) {
+                width:25%;
+            }
+            
         }
         .wrapper {
             margin:0 auto;
             max-width:1280px;
             width: 70%;
+            @media (max-width: 940px) {
+                width:85%;
+            }
+
+            @media (max-width:775px) {
+                width:95%;
+            }
 
             button {
                 background: #F97C7C;
@@ -27,6 +55,7 @@ html {
                 text-transform:uppercase;
                 font-size:1.2rem;
                 margin-top:5px;
+               
             }
         }
     }
