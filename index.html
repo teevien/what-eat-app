@@ -6,82 +6,81 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
         integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700|Playfair+Display:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700|Lato:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="styles/style.css">
     <title>What to eat?</title>
 </head>
 <body>
     <!-- Header Start -->
-    <header id="random">
-      
-    </header>
+    <div class="header__background"></div>
+
+    <div class="header__title">
+            <h1>Restaurant Finder</h1>
+            <p>Find a restaurant in your city to try! <a href="#search-city">start</a></p>
+    </div>
     <!-- Header End -->
     <!-- Main Start -->
     <main>
-        <section class="main">
+        <!-- Search City Start -->
+        <section class="search-city" id="search-city">
             <div class="wrapper clearfix">
-                <h1>Restaurant<span>Finder</span></h1>
-                <!-- Choose City -->
-                <div class="choose-city">
-                    <h2 class="circle">1</h2>
-                    <h2>Choose a City</h2>
+                <div class="search-city__container">
+                    <h2 class="search-city__circle">1</h2>
+                    <h2>Enter a City</h2>
             
-                    <form>
+                    <form class="search-city__form">
                         <label for="userInput"></label>
-                        <input type="text" placeholder="Enter a city" id="userInput" class="input" name="userInput"
-                            required>
-                        <button type="submit" class="search" title="search cuisines in the specified city">
-                            <!-- <i class="fas fa-search"></i> -->
-                            Submit
-                        </button>
+                        <input type="text" placeholder="" id="userInput" class="search-city__input" name="userInput" required>
+                        <button type="submit" id="search-city" class="search-city__submit" title="search cuisines in the specified city">Submit</button>
                     </form>
                 </div>
-                <!-- Choose City Ends -->
-                <!-- Choose Cuisine -->
-                <div class="choose-cuisine">
-                    <!-- <p>Searching in..</p>
-                    <h2 id="displayCity"></h2> -->
-                    <h2 class="circle">2</h2>
-                    <h2>Choose a Cuisine</h2>
-                    <form class="chooseCuisine">
-                        <label for="cuisines"></label>
-                        <select name="cuisines" id="cuisineList" required>
-                            <option value="" selected disabled>Choose Cuisine</option>
-                        </select>
-                        <label for="submitCuisine"></label>
-                        <button id="submitCuisine" class="submit" title="shows restaurants">Find a restaurant</button>
-                    </form>
-                </div>
-                <!-- Choose Cuisine Ends -->
             </div>
         </section>
+        <!-- Search City Ends -->
+
+
+        <!-- Search Cuisine Start -->
+        <section class="search-cuisine" id="cuisine">
+            <div class="wrapper">
+                <div class="search-cuisine__container">
+                    <h2 class="search-cuisine__circle">2</h2>
+                    <h2>Choose a Cuisine</h2>
+                    <div class="search-cuisine__form">
+                        <label for="cuisines"></label>
+                        <select name="cuisines" id="cuisine-select" class="search-cuisine__select" required>
+                            <option value="" selected disabled></option>
+                        </select>
+                        <label for="submitCuisine"></label>
+                        <button id="cuisine-submit" class="search-cuisine__submit" title="shows restaurants">Find a restaurant</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!-- Search Cuisine Ends -->
+
 
         <!-- Display Results Start -->
-        <section class="results">
-            <div class="wrapper">
-                <div class="result">
-                    <div id="restaurantName">
+        <section class="results" id="results">
+            <div class="results__wrapper">
+                <div class="results__container">
+                    <div id="results__restaurants">
                         <!-- populate with ajax call -->
+                        
                     </div>
 
-                    <form>
+                    <form class="results__form">
                         <label for="searchAgain"></label>
-                        <button 
-                            id="searchAgain"
-                            class="submit"
-                        >Another One</button>
-
+                        <button id="searchAgain" class="results__form__search-again">Another One</button>
                         <label for="newSearch"></label>
-                        <button
-                            id="newSearch"
-                            type="submit"
-                            class="submit"
-                        >New Search</button>
+                        <button id="newSearch" type="submit" class="results__form__new-search">New Search</button>
                     </form>
                 </div>
             </div>
         </section>
         <!-- Display Results End -->
+
+
     </main>
     <!-- Main End -->
     <!-- JavaScript -->

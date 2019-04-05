@@ -1,0 +1,84 @@
+#results__restaurants {
+    margin: 0 auto;
+    width:60%;
+    @media (max-width:896px) {
+        width:75%;
+    }
+
+    @media (max-width:740px) {
+        width:90%;
+    }
+
+    @media (max-width:500px) {
+        width:95%;
+    }
+
+    .results__restaurants__img-container {
+        padding-top:1em;
+        position:relative;
+
+        img {
+            width:100%;
+            filter:blur(1.4px);
+            display:block;
+            transition:0.2s;
+               &:hover {
+                filter:none;
+            };
+        };
+    };
+
+    .results__restaurants__content {
+        background: rgba(144,51,51,0.5);
+        position:absolute;
+        top:0;
+        padding:1em;
+        color: $white;
+        text-shadow:2px 2px 2px $black;
+        h2, p{
+            margin:0;
+        };
+
+        h2 {
+            @media(max-width:740px) {
+                font-size:1.5em;
+            }
+            @media (max-width:500px) {
+                font-size:1.2em;
+            }
+        }
+
+    };
+};
+
+.results__form {
+    // border:1px solid red;
+    width:60%;
+    margin: 0 auto;
+    padding:1em 0;
+    @media (max-width:896px) {
+        width:75%;
+    }
+
+    @media (max-width:740px) {
+        width:90%;
+    }
+
+    @media (max-width:500px) {
+        width:95%;
+    }
+    button {
+        width:100%;
+        padding:5px;
+        margin-top:0.5em;
+        background:none;
+        border:none;
+        border:2px solid $pink;
+        color: $pink;
+        transition: 0.2s;
+        &:hover {
+            background: $pink;
+            color: $white;
+        }
+    }
+}

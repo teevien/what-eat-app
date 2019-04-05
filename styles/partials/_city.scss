@@ -1,0 +1,83 @@
+.search-city {
+    position:relative;
+}
+
+.search-city__container {
+    margin:0 auto;
+    width:50%;
+    // border:1px solid black;
+    text-align:center;
+    transform: translate(-50%, 50%);
+    position:absolute;
+    left:50%;
+    // top:20%;
+
+    .search-city__circle {
+        background: $pink;
+        padding:10px 15px;
+        width:25%;
+        color:$white;
+        border-radius:50%;
+        font-family:$accentFont;
+        margin: 0 auto 1em auto;
+        @media (min-width:414px) {
+            width:20%;
+        }
+
+        @media (min-width:790px) {
+            width:15%;
+        }
+
+        @media (min-width: 1040px) {
+            width:10%;
+        }
+    }
+    // .search-city__circle {
+    //     background: $pink;
+    //     padding:10px 15px ;
+    //     width:10%;
+    //     border-radius:50%;
+    //     color: $white;
+    //     font-family:$accentFont;
+    //     font-size:2em;
+    //     margin: auto;
+    //     margin-bottom:1em;
+    // };
+
+    h2 {
+        margin-top:0.3em;
+    };
+};
+
+.search-city__form {
+    margin-top:1em;
+
+    .search-city__input, .search-city__submit {
+        width:80%;
+        @media (max-width:740px) {
+            width:100%;
+        }
+    };
+
+    .search-city__input {
+        background:none;
+        border:none;
+        color: $pink;
+        text-align:center;
+        border-bottom:2px solid $pink;
+        font-size:1.4em;
+    };
+
+    .search-city__submit {
+        margin-top:1em;
+        background: none;
+        border:2px solid $pink;
+        color: $pink;
+        padding:0.5em;
+        transition: 0.8s;
+        &:hover {
+            background: $pink;
+            color: $white;
+        }
+    }
+}

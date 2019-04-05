@@ -1,6 +1,92 @@
-header {
-    background-image: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.2)), url('../assets/img1.jpg');
+.header__background {
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('../assets/img1.jpg');
     background-position: center;
     background-size:cover;
-    height:100px;
+    min-height:100vh;
+    filter:blur(1.5px);
+};
+
+.header__title {
+    background: rgba(144,51,51,0.5);
+    width:85vw;
+    color:$white;
+    text-shadow:3px 3px 2px $black;
+    margin:0 auto;
+    padding:1em;
+    position:absolute;
+    bottom:50%;
+    transform: translateX(-50%);
+    left:50%;
+    text-align:center;
+    @media (min-width:720px) {
+        width:70vw;
+    }
+
+    @media (min-width:1000px) {
+        width:50vw;
+    }
+    h1 {
+        margin:0;
+        font-family: $accentFont;
+        text-transform: uppercase;
+        overflow-wrap: break-word;
+    };
+
+    a {
+        text-decoration:none;
+        color:$white;
+        background:none;
+        border:2px solid $pink;
+        padding:5px 10px;
+        margin-top:1em;
+        display:block;
+        transition:0.3s;
+        text-transform:uppercase;
+        &:hover {
+            background:$pink;
+        }
+
+        @media (min-width:480px) {
+            width: 50%;
+            margin-left:auto;
+            margin-right:auto;
+        }
+    }
 }
+
+// .header__title {
+//     background: rgba(144, 51, 51, 0.5);
+//     width:45vw;
+//     color: $white;
+//     text-shadow:3px 3px 2px $black;
+//     padding: 3em;
+//     position:absolute;
+//     bottom:4em;
+//     left: 4em;
+//     @media (min-width:1238px) {
+//         width:50vw;
+//     }
+
+
+//     h1 {
+//         margin:0;
+//         font-size:4.5em;
+//         font-family: $accentFont;
+//         text-transform:uppercase;
+//     };
+
+//     a {
+//         text-decoration:none;
+//         color: $white;
+//         background: none;
+//         border:2px solid $pink;
+//         padding:5px 10px;
+//         text-transform:uppercase;
+//         text-shadow:none;
+//         margin-left:0.5em;
+//         transition: 0.2s;
+//         &:hover {
+//             background: $pink;
+//         }
+//     };
+// };

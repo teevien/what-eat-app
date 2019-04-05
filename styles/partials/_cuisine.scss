@@ -1,0 +1,107 @@
+.search-cuisine {
+    position:relative;
+};
+
+.search-cuisine__container {
+    margin:0 auto;
+    width:50%;
+    // border:1px solid black;
+    text-align:center;
+    transform: translate(-50%, 50%);
+    position:absolute;
+    left:50%;
+
+    .search-cuisine__circle {
+        background: $pink;
+        padding: 10px 15px;
+        width:25%;
+        color: $white;
+        border-radius: 50%;
+        font-family: $accentFont;
+        margin:0 auto 1em auto;
+         @media (min-width:414px) {
+            width:20%;
+        }
+
+        @media (min-width:790px) {
+            width:15%;
+        }
+
+        @media (min-width: 1040px) {
+            width:10%;
+        }
+    }
+
+    // .search-cuisine__circle {
+    //     background: $pink;
+    //     padding:10px 15px ;
+    //     width:10%;
+    //     border-radius:50%;
+    //     color: $white;
+    //     font-family:$accentFont;
+    //     font-size:2em;
+    //     margin: auto;
+    //     margin-bottom:1em;
+    // };
+
+    h2 {
+        margin-top:0.3em;
+    };
+};
+
+.search-cuisine__form {
+    margin-top:1em;position:relative;
+    &:after {
+        content: '\f0d7';
+        font: normal normal normal 17px/1 FontAwesome;
+        position:absolute;
+        top:0;
+        right:0.5em;
+        pointer-events:none;
+
+        @media (min-width:722px) {
+            right:3em;
+        }
+    };
+
+    &::ms-expand {
+        display:none;
+    }
+
+    select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        color: $pink;
+    }
+
+    .search-cuisine__select, .search-cuisine__submit {
+        width:80%;
+        text-align:center;
+          @media (max-width:740px) {
+            width:100%;
+        }
+    };
+
+    .search-cuisine__select {
+        background:none;
+        border:none;
+        border-bottom:2px solid $pink;
+        &::after {
+            border:1px solid red;
+        };
+    };
+
+    .search-cuisine__submit {
+        margin-top:1em;
+        background:none;
+        border:2px solid $pink;
+        color: $pink;
+        padding:0.5em;
+        transition: 0.8s;
+        &:hover {
+            background: $pink;
+            color: $white;
+        };
+    };
+};
